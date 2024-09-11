@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Manage Flights</h1>
+
+        <form id="flight-form" class="mt-4">
+            <div class="form-group">
+                <label for="flightNumber">Flight Number</label>
+                <input type="text" id="flightNumber" class="form-control" placeholder="Enter flight number" required>
+            </div>
+            <div class="form-group">
+                <label for="departure">Departure</label>
+                <input type="text" id="departure" class="form-control" placeholder="Enter departure location" required>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" id="destination" class="form-control" placeholder="Enter destination" required>
+            </div>
+            <div class="form-group">
+                <label for="departureTime">Departure Time</label>
+                <input type="datetime-local" id="departureTime" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="arrivalTime">Arrival Time</label>
+                <input type="datetime-local" id="arrivalTime" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add Flight</button>
+        </form>
+
+        <h2 class="text-center mt-5">Existing Flights</h2>
+        <table class="table mt-3" id="flights-table">
+            <thead>
+                <tr>
+                    <th>Flight Number</th>
+                    <th>Departure</th>
+                    <th>Destination</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Flights will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="js/flights.js"></script>
+</body>
+</html>
